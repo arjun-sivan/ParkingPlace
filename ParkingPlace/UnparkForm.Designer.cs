@@ -119,6 +119,7 @@
             this.Controls.Add(this.textBox1);
             this.Name = "UnparkForm";
             this.Text = "UnparkForm";
+            this.Load += new System.EventHandler(this.UnparkForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

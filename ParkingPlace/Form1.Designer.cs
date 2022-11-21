@@ -66,7 +66,7 @@
             // 
             // buttonAdminLogin
             // 
-            this.buttonAdminLogin.Location = new System.Drawing.Point(533, 392);
+            this.buttonAdminLogin.Location = new System.Drawing.Point(514, 357);
             this.buttonAdminLogin.Name = "buttonAdminLogin";
             this.buttonAdminLogin.Size = new System.Drawing.Size(153, 29);
             this.buttonAdminLogin.TabIndex = 3;

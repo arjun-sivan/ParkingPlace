@@ -28,25 +28,33 @@ namespace ParkingPlace
             DialogResult res = MessageBox.Show("Are you sure you want to Unpark", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
             if (res == DialogResult.OK)
             {
-                MessageBox.Show("You have clicked Ok Button");
+               
                 VehicleType type = new VehicleType();
                 bool isChecked = radioButtonCAR.Checked;
                 if (isChecked)
                     type = VehicleType.CAR;
                 else
                     type = VehicleType.MOTOR;
-                ParkingPlot.Instance.UnparkVehicle(Int32.Parse(textBox1.Text), type);
 
-                textBox1.Text = String.Empty;
-                radioButtonCAR.Checked = false;
-                radioButtonMOTOR.Checked = false;
+                bool UnparkStatus = ParkingPlot.Instance.UnparkVehicle(Int32.Parse(textBox1.Text), type);
+
+               if (UnparkStatus == false)
+                {
+                    MessageBox.Show("Vehicle Not Found");
+                    this.Reset();
+                }
+                if(UnparkStatus)
+                { 
+                    MessageBox.Show("Vehicle unparked succesfully");
+                    this.Reset();
+                }
+
+               
             }
             if (res == DialogResult.Cancel)
             {
                 MessageBox.Show("canceled Succesfully");
-                textBox1.Text = String.Empty;
-                radioButtonCAR.Checked = false;
-                radioButtonMOTOR.Checked = false;
+                this.Reset();
             }
 
             
@@ -58,5 +66,17 @@ namespace ParkingPlace
             Form1 form1 = new Form1();
             form1.Show();
         }
+
+        private void UnparkForm_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void Reset()
+        {
+            textBox1.Text = String.Empty;
+            radioButtonCAR.Checked = false;
+            radioButtonMOTOR.Checked = false;
+        }
+
     }
 }

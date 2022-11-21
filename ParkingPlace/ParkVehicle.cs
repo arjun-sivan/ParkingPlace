@@ -43,7 +43,7 @@ namespace ParkingPlace
 
                 
                 Tuple<int, int> parkingID = ParkingPlot.Instance.ParkVehicle(vehicle);
-                string parkingIdString = parkingID.ToString();
+               // string parkingIdString = parkingID.ToString();
 
                 if (parkingID.Item1 == -1 && parkingID.Item2 == -1)
                 {
@@ -54,7 +54,7 @@ namespace ParkingPlace
                 textBox1.Text = String.Empty;
                 radioButtonCAR.Checked = false;
                 radioButtonMOTOR.Checked = false;
-                MessageBox.Show("The vehicle is succesfully parked at floor,Slot {0} ",parkingIdString);
+                MessageBox.Show("The vehicle is succesfully parked at floor{parkingID.Item1.ToString()} and Slot {parkingID.Item2.ToString()}");
 
             }
             if (res == DialogResult.Cancel)

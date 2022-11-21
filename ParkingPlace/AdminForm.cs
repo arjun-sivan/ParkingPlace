@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.DataFormats;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ParkingPlace
@@ -45,6 +46,7 @@ namespace ParkingPlace
         private void buttonAddFloor_Click(object sender, EventArgs e)
         {
            AddFloorForm addFloorForm = new AddFloorForm();
+            this.FormLocation(addFloorForm);
             addFloorForm.ShowDialog();
             this.GenerateList();
 
@@ -53,6 +55,7 @@ namespace ParkingPlace
         private void buttonRemoveFloor_Click(object sender, EventArgs e)
         {
             RemoveFloorForm removeFloorForm = new RemoveFloorForm();
+            this.FormLocation(removeFloorForm);
             removeFloorForm.ShowDialog();
             
         }
@@ -61,7 +64,16 @@ namespace ParkingPlace
         {
             this.Close();
             Form1 form = new Form1();
+            this.FormLocation(form);
             form.ShowDialog();
+
+        }
+
+        private void FormLocation( Form form)
+        {
+            form.StartPosition = FormStartPosition.Manual;
+            form.Left = 500;
+            form.Top = 500;
 
         }
     }

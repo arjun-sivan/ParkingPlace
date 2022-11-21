@@ -33,10 +33,7 @@ namespace ParkingPlace
             listView1.Items.Clear();
             foreach (var floor in ParkingPlot.Instance.floors.Select((value, i) => new { i, value }))
             {
-
                 string[] row = { floor.i.ToString(), floor.value.availParkingCars.ToString(), floor.value.availParkingMotors.ToString() };
-
-
                 var listViewItem = new ListViewItem(row);
                 listView1.Items.Add(listViewItem);
 
@@ -46,7 +43,6 @@ namespace ParkingPlace
         private void buttonAddFloor_Click(object sender, EventArgs e)
         {
            AddFloorForm addFloorForm = new AddFloorForm();
-            this.FormLocation(addFloorForm);
             addFloorForm.ShowDialog();
             this.GenerateList();
 
@@ -55,7 +51,6 @@ namespace ParkingPlace
         private void buttonRemoveFloor_Click(object sender, EventArgs e)
         {
             RemoveFloorForm removeFloorForm = new RemoveFloorForm();
-            this.FormLocation(removeFloorForm);
             removeFloorForm.ShowDialog();
             
         }
@@ -64,17 +59,10 @@ namespace ParkingPlace
         {
             this.Close();
             Form1 form = new Form1();
-            this.FormLocation(form);
             form.ShowDialog();
 
         }
 
-        private void FormLocation( Form form)
-        {
-            form.StartPosition = FormStartPosition.Manual;
-            form.Left = 500;
-            form.Top = 500;
-
-        }
+       
     }
 }

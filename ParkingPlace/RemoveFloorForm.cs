@@ -18,20 +18,13 @@ namespace ParkingPlace
         {
             InitializeComponent();
             int Count = ParkingPlot.Instance.floors.Count();
-
             //string[] floorList = new string[10];
             List<string> floorList = Enumerable.Range(0, Count).Select(x => x.ToString()).ToList();
             comboBox1.DataSource = floorList;
-
-
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-          
-   
-
 
         }
 
@@ -54,9 +47,7 @@ namespace ParkingPlace
             {
                 MessageBox.Show("Succesfully Canceled");
                
-            }
-
-          
+            }          
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

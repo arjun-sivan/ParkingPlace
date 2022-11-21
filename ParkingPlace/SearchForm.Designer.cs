@@ -37,6 +37,9 @@
             this.buttonBack = new System.Windows.Forms.Button();
             this.labelResult = new System.Windows.Forms.Label();
             this.labelResultSlot = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.buttonReset = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -109,24 +112,56 @@
             // labelResult
             // 
             this.labelResult.AutoSize = true;
-            this.labelResult.Location = new System.Drawing.Point(320, 249);
+            this.labelResult.Location = new System.Drawing.Point(313, 258);
             this.labelResult.Name = "labelResult";
             this.labelResult.Size = new System.Drawing.Size(0, 20);
             this.labelResult.TabIndex = 7;
+            this.labelResult.Click += new System.EventHandler(this.labelResult_Click);
             // 
             // labelResultSlot
             // 
             this.labelResultSlot.AutoSize = true;
-            this.labelResultSlot.Location = new System.Drawing.Point(310, 293);
+            this.labelResultSlot.Location = new System.Drawing.Point(417, 258);
             this.labelResultSlot.Name = "labelResultSlot";
             this.labelResultSlot.Size = new System.Drawing.Size(0, 20);
             this.labelResultSlot.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(159, 258);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(156, 20);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Your Vehicle is at floor";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(352, 258);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 20);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "and slot";
+            // 
+            // buttonReset
+            // 
+            this.buttonReset.Location = new System.Drawing.Point(593, 254);
+            this.buttonReset.Name = "buttonReset";
+            this.buttonReset.Size = new System.Drawing.Size(94, 29);
+            this.buttonReset.TabIndex = 11;
+            this.buttonReset.Text = "Reset";
+            this.buttonReset.UseVisualStyleBackColor = true;
+            this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonReset);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.labelResultSlot);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.buttonBack);
@@ -154,5 +189,8 @@
         private Button buttonBack;
         private Label labelResult;
         private Label labelResultSlot;
+        private Label label3;
+        private Label label4;
+        private Button buttonReset;
     }
 }

@@ -51,5 +51,20 @@ namespace ParkingPlace
             Form1 form1 = new Form1();
             form1.Show();
         }
+
+        private void labelResult_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = String.Empty;
+            radioButtonCAR.Checked = false;
+            radioButtonMOTOR.Checked= false;
+            labelResult.Text = String.Empty;
+            labelResultSlot.Text = String.Empty;
+            
+        }
     }
 }

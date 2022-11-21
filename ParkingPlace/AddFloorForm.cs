@@ -28,7 +28,6 @@ namespace ParkingPlace
                 for (int i = 0; i < multiplier; i++)
                 {
                     bool status = ParkingPlot.Instance.AddFloor(new Floor(Int32.Parse(textBox1.Text), Int32.Parse(textBox2.Text)));
-
                 }
                 this.Close();
             }
@@ -37,12 +36,8 @@ namespace ParkingPlace
                 MessageBox.Show("You canceled adding the floor");
                 textBox1.Text = String.Empty;
                 textBox2.Text = String.Empty;   
-                textBox3.Text = String.Empty;
-                
-                
-            }
-           
-         
+                textBox3.Text = String.Empty;            
+            }       
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

@@ -9,15 +9,11 @@ namespace ParkingPlace
             InitializeComponent();
         }
 
-       
-
         private void buttonSearch_Click(object sender, EventArgs e)
-        {
-            
+        {          
             SearchForm searchForm = new SearchForm();
             searchForm.Show();
             this.Hide();
-
         }
 
         private void buttonAdminLogin_Click(object sender, EventArgs e)

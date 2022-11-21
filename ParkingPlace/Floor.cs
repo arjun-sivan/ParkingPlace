@@ -21,9 +21,7 @@ namespace ParkPlatz
         public Floor(int _availParkingCars,int _availParkingMotors)
         {
             this.availParkingCars = _availParkingCars;   
-            this.availParkingMotors = _availParkingMotors;
-            
-            
+            this.availParkingMotors = _availParkingMotors;          
         }
 
         public int ParkVehicle(Vehicle vehicle)
@@ -119,8 +117,6 @@ namespace ParkPlatz
 
                 }
             }
-
-
             return -1;
         }
     }

@@ -123,7 +123,6 @@ namespace ParkPlatz
             {
                 this.totalAvailableCarParking += floor.availParkingCars;
                 this.totalAvailableMotorParking += floor.availParkingMotors;
-
                 floors.Insert(0, floor);
                 return true;
             }

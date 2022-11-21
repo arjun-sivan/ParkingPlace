@@ -13,9 +13,7 @@ namespace ParkPlatz
 
         public ParkingSpace( string vehicleNumber)
         {
-
             this.vehicleNumber = vehicleNumber;
-
         }
     }
   
